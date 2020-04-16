@@ -138,6 +138,22 @@ Vector Vector::operator-(const Vector &rhs) const {
     return retVal;
 }
 
+Vector Vector::operator-()const {
+    Vector retVal(_size);
+    for (size_t i = 0; i < _size; ++i) {
+        retVal._data[i] = _data[i] * -1;
+    }
+    return retVal;
+}
+
+Vector Vector::operator*(double val)const {
+    Vector retVal(_size);
+    for ( size_t i = 0; i < _size; ++i) {
+        retVal._data[i] = _data[i] * val;
+    }
+    return retVal;
+}
+
 bool Vector::IsValid() const {
     return _size != 0;
 }

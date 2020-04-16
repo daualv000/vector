@@ -128,6 +128,25 @@ int main(int argc, char* argv[]) {
 //    assert(g.EuclidianDistance(h) == sqrt(25.81));
 //    assert(g.EuclidianDistance(g) == 0);
 
+    Vector o(3, data1);
+    o = -o;
+    assert(DoubleEquals(o[0], -1.0));
+    assert(DoubleEquals(o[1], -2.0));
+    assert(DoubleEquals(o[2], -3.0));
+    //    assert(i[0] == -2.0);
+//    assert(i[1] == -4.0);
+//    assert(i[2] == -6.0);
+
+    Vector j(3, data1);
+    j = j * 2;
+    assert(DoubleEquals(j[0], 2.0));
+    assert(DoubleEquals(j[1], 4.0));
+    assert(DoubleEquals(j[2], 6.0));
+    //    assert(i[0] == 2.0);
+//    assert(i[1] == 6.0);
+//    assert(i[2] == 12.0);
+
+
     cout << "All unit tests passed" << endl;
 
     return 0;
